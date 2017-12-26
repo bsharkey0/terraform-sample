@@ -6,9 +6,9 @@ resource "aws_security_group" "sg_webapp" {
 
   # Web App port
   ingress {
-    from_port   = 5000
-    to_port     = 5000
-    protocol    = "tcp"
+    from_port       = 5000
+    to_port         = 5000
+    protocol        = "tcp"
     security_groups = ["${aws_security_group.sg_webapp_alb.id}"]
   }
 

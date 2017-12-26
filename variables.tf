@@ -2,26 +2,18 @@ variable "aws_region" {
   description = "AWS region to launch servers."
   default     = "us-east-1"
 }
-variable "az_count" {
-  description = "Number of AZs to cover in a given AWS region"
-  default     = "2"
-}
 
 variable vpc_id {
-    description = "AWS VPC ID to use."
+  description = "AWS VPC ID to use."
 }
 
 variable "key_name" {
-    description = "AWS key pair name to use."
+  description = "AWS key pair name to use."
 }
 
 variable "instance_type" {
-    default = "t2.micro"
-    description = "AWS instance type"
-}
-
-variable "bucket_name" {
-    description = "S3 bucket name, must be unique"
+  default     = "t2.micro"
+  description = "AWS instance type"
 }
 
 variable "asg_min" {
@@ -44,14 +36,14 @@ variable "admin_cidr_ingress" {
 }
 
 variable "ecs_cluster_name" {
-    description = "ECS Cluster name"
-    default = "webapp-cluster"
+  description = "ECS Cluster name"
+  default     = "webapp-cluster"
 }
 
 variable "image_url" {
-    description = "Docker image url"
+  description = "Docker image location, ex. training/webapp:latest"
 }
 
 variable "container_name" {
-    description = "Docker container name"
+  description = "Docker container name"
 }

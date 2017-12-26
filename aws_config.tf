@@ -1,8 +1,7 @@
 provider "aws" {
-  region = "${var.aws_region}"
-  version = "~> 1.6" # Lockdown the version
+  region  = "${var.aws_region}"
+  version = "~> 1.6"            # Lockdown the version
 }
-
 
 # Get subnets in existing vpc
 data "aws_subnet_ids" "main" {
